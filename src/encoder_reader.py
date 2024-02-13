@@ -1,8 +1,11 @@
-"""
+"""!
 @file encoder_reader.py
 This file contains the class implementation for reading the values on the ME 405 microcontroller
 and ametek pittman motors.  This file also contains testing code to test if the encoder can be read,
 if the encoder can handle overflows both positively and negatively, and if the encoder can be zeroed.
+
+@author Jared Sinasohn, Sydney Ulvick, Sean Nakashimo
+@date 15-Feb-2024
 """
 import micropython
 import pyb
@@ -108,6 +111,7 @@ class Encoder:
 if __name__ == "__main__":
     # Testing code to test encoder.  This code does not run the motor, the motor
     # is simply hand spun to determine if the encoder reads properly.
+    # This code does not run if the file is imported as a module
     
     # create the pin object to read encoder channel A
     pin1 = pyb.Pin(pyb.Pin.board.PC6, pyb.Pin.IN)
